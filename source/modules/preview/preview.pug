@@ -1,0 +1,17 @@
+mixin preview
+  .m-preview.carousel.slide
+    .carousel-inner.m-preview__inner
+      - for(let i = 0; i < 6; i ++) {
+        .carousel-item(class= i ? "" : "active")
+          img.d-block.w-100(src="http://via.placeholder.com/400x200", alt="")
+      - }
+  .m-preview-indicators
+    button.m-preview-prev.js-preview-slider-prev(type="button")
+      i.fa.fa-angle-left
+    .owl-carousel.js-preview-slider
+      - for(let i = 0; i < 6; i ++) {
+        .item(data-target=".m-preview", data-slide-to=`${'' + i}`)
+          img(src="http://via.placeholder.com/400x200", alt="")
+      - }
+    button.m-preview-next.js-preview-slider-next(type="button")
+      i.fa.fa-angle-left

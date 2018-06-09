@@ -1,0 +1,12 @@
+mixin partner
+  .partner
+    .container
+      span.partner__prev.js-partner-slider-prev
+        img(src="images/icon-angle-left.png", alt="")
+      span.partner__next.js-partner-slider-next
+        img(src="images/icon-angle-left.png", alt="")
+      .js-partner-slider.owl-carousel
+        - for (let i = 0; i < 6; i++) {
+          .partner__item
+            img(src="images/partner.png", alt="")
+        - }

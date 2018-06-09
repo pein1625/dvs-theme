@@ -1,0 +1,14 @@
+.m-breadcrumb {
+  padding: 10px 0;
+  background: 0;
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: '\f105';
+    font-family: 'fontawesome';
+  }
+  a {
+    color: $gray-3;
+    &:hover {
+      color: $gray-3;
+    }
+  }
+}
