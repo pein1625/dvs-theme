@@ -3,9 +3,14 @@ include ../modules/header/header
 include ../modules/footer/footer
 
 doctype html
-html
+html(lang="vi")
   +head(head)
   body
     +header
+    // end header
     block content
     +footer
+    // end footer
+
+    // javascript library
+    +script(head)

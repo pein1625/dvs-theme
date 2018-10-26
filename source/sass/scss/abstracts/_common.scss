@@ -33,7 +33,8 @@ p {
 img {
   max-width: 100%;
 }
-button {
+button,
+label {
   cursor: pointer;
 }
 
@@ -47,6 +48,9 @@ button {
 // spacing
 .mb-30 {
   margin-bottom: 30px !important;
+}
+.pb-30 {
+  padding-bottom: 30px !important;
 }
 .m-last-0:last-child {
   margin: 0 !important;

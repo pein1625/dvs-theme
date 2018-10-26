@@ -1,16 +1,26 @@
+- var lib = ['fontawesome', 'jquery', 'popper', 'bootstrap']
+
 mixin head(data)
-  - var lib = ['fontawesome', 'jquery', 'popper', 'bootstrap']
   head
     title Title
     meta(charset='utf-8')
+    meta(name="description", content="Description")
     meta(name="viewport", content="width=device-width, initial-scale=1")
+    // vendor style
     each css in lib
       if (cssList = data[css].css)
         each css2 in cssList
           link(rel="stylesheet", href=css2)
-    link(rel="stylesheet", href="css/style.css")
-    each js in lib
-      if (jsList = data[js].js)
-        each js2 in jsList
-          script(src=js2, defer)
-    script(src="js/globals.js", defer)
+
+    // custom style
+    link(rel="stylesheet", href="./css/style.css")
+
+mixin script(data)
+  // vendor script
+  each js in lib
+    if (jsList = data[js].js)
+      each js2 in jsList
+        script(src=js2, defer)
+
+  // custom script
+  script(src="./js/globals.js", defer)
