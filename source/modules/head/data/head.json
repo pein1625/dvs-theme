@@ -2,36 +2,46 @@
   "head": {
     "jquery": {
       "js": [
-        "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-      ]
-    },
-    "bootstrap": {
-      "css": [
-        "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
-      ],
-      "js": [
-        "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"
+        "./vendor/jquery/jquery-3.3.1.min.js"
       ]
     },
     "popper": {
       "js": [
-        "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        "./vendor/popper/popper.min.js"
+      ]
+    },
+    "bootstrap": {
+      "css": [
+        "./vendor/bootstrap/css/bootstrap.min.css"
+      ],
+      "js": [
+        "./vendor/bootstrap/js/bootstrap.min.js"
       ]
     },
     "owl-carousel": {
       "css": [
-        "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        "./vendor/owl-carousel/css/owl-carousel.min.css"
       ],
       "js": [
-        "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        "./vendor/owl-carousel/js/owl-carousel.min.js"
       ]
     },
     "slick-carousel": {
       "css": [
-        "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        "./vendor/slick-carousel/css/slick.min.css"
       ],
       "js": [
-        "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        "./vendor/slick-carousel/js/slick.min.js"
+      ]
+    },
+    "fontawesome": {
+      "css": [
+        "./vendor/font-awesome-4.7.0/css/font-awesome.min.css"
+      ]
+    },
+    "animate": {
+      "css": [
+        "./vendor/animate/animate.min.css"
       ]
     },
     "jquery-ui": {
@@ -71,7 +81,7 @@
     },
     "moment": {
       "js": [
-        "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"
+        "./vendor/moment/moment.min.js"
       ]
     },
     "underscore": {
@@ -82,16 +92,6 @@
     "clndr": {
       "js": [
         "https://cdnjs.cloudflare.com/ajax/libs/clndr/1.4.7/clndr.min.js"
-      ]
-    },
-    "fontawesome": {
-      "css": [
-        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      ]
-    },
-    "animate": {
-      "css": [
-        "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
       ]
     }
   }

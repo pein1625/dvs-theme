@@ -143,11 +143,32 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest(fonts.out));
 });
 
+// copy css folder
+gulp.task('copycss', function(){
+  return gulp
+    .src('source/cs/**/*.css')
+    .pipe(gulp.dest('dest/css/'));
+});
+
 // copy sass folder
-gulp.task('copysassfolder', function(){
+gulp.task('copysass', function(){
   return gulp
     .src('source/sass/**/*.scss')
     .pipe(gulp.dest('dest/css/'));
+});
+
+// copy vendor folder
+gulp.task('copyvendor', function(){
+  return gulp
+    .src('source/vendor/**/*.*')
+    .pipe(gulp.dest('dest/vendor/'));
+});
+
+// copy video folder
+gulp.task('copyvideo', function(){
+  return gulp
+    .src('source/video/**/*.*')
+    .pipe(gulp.dest('dest/video/'));
 });
 
 // = Delete
@@ -288,8 +309,11 @@ gulp.task('dev', function (cb) {
 gulp.task('build', function (cb) {
   return runSequence(
     'cleanup',
+    'copycss',
+    'copysass',
+    'copyvideo',
+    'copyvendor',
     'compile-images',
-    'copysassfolder',
     'compile-styles',
     'compile-js',
     'build-html',
