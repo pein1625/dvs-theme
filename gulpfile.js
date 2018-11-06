@@ -58,7 +58,7 @@ var options = {
 
 var scss = {
   sassOpts: {
-    outputStyle: 'nested',
+    outputStyle: 'expand',
     precison: 3,
     errLogToConsole: true,
     includePaths: [

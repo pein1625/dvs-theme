@@ -20,10 +20,10 @@
     },
     "owl-carousel": {
       "css": [
-        "./vendor/owl-carousel/css/owl-carousel.min.css"
+        "./vendor/owl-carousel/css/owl.carousel.min.css"
       ],
       "js": [
-        "./vendor/owl-carousel/js/owl-carousel.min.js"
+        "./vendor/owl-carousel/js/owl.carousel.min.js"
       ]
     },
     "slick-carousel": {
