@@ -1,8 +1,8 @@
 mixin breadcrumb(...list)
   - var lastItem = list.pop()
-  nav
+  nav.m-breadcrumb
     .container
-      ol.breadcrumb.m-breadcrumb
+      ol.breadcrumb
         each item in list
           li.breadcrumb-item
             a(href="#!")= item

@@ -93,6 +93,14 @@ button, label {
     -webkit-line-clamp: 4;
     max-height: 6em;
   }
+  &--5 {
+    -webkit-line-clamp: 5;
+    max-height: 7.5em;
+  }
+  &--6 {
+    -webkit-line-clamp: 6;
+    max-height: 9em;
+  }
 }
 
 // utilities

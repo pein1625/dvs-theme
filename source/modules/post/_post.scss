@@ -1,0 +1,14 @@
+.post {
+  h1 {}
+  &-sapo {
+    font-weight: bold;
+    font-size: inherit;
+  }
+  &-content {
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
