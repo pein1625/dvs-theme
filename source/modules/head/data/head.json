@@ -52,6 +52,14 @@
         "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"
       ]
     },
+    "ripple": {
+      "css": [
+        "./vendor/ripple/css/ripple.min.css"
+      ],
+      "js": [
+        "./vendor/ripple/js/ripple.min.js"
+      ]
+    },
     "bootstrap-datepicker": {
       "css": [
         "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css",

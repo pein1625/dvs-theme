@@ -26,7 +26,7 @@ pug.filters.code = function( block ) {
 
 var options = {
   del: [
-    'dest'
+    dest
   ],
   browserSync: {
     server: {
@@ -144,11 +144,11 @@ gulp.task('fonts', function () {
 });
 
 // copy css folder
-gulp.task('copycss', function(){
-  return gulp
-    .src(source + 'css/**/*.css')
-    .pipe(gulp.dest(dest + 'css/'));
-});
+// gulp.task('copycss', function(){
+//   return gulp
+//     .src(source + 'css/**/*.css')
+//     .pipe(gulp.dest(dest + 'css/'));
+// });
 
 // copy sass folder
 // gulp.task('copysass', function(){
@@ -298,7 +298,7 @@ gulp.task('dev', function (cb) {
     'build',
     [
       'browser-sync',
-      // 'build-images-name',
+      'build-images-name',
       'watch'
     ],
     cb
@@ -309,7 +309,7 @@ gulp.task('dev', function (cb) {
 gulp.task('build', function (cb) {
   return runSequence(
     'cleanup',
-    'copycss',
+    // 'copycss',
     // 'copysass',
     'copyvideo',
     'copyvendor',
