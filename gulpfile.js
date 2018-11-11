@@ -46,7 +46,7 @@ var options = {
     hardFail: true,
     includePaths: [
       __dirname + '/',
-      __dirname + '/node_modules',
+      // __dirname + '/node_modules',
       __dirname + '/source/js'
     ]
   },
@@ -100,10 +100,10 @@ gulp.task('watch', function (cb) {
     gulp.start('compile-styles');
   });
 
-  $.watch(source + '/images/**/*', function () {
-    gulp.start('compile-images');
-    gulp.start('build-images-name');
-  });
+  // $.watch(source + '/images/**/*', function () {
+  //   gulp.start('compile-images');
+  //   gulp.start('build-images-name');
+  // });
 
   // $.watch([
   //   source + '/*.html',

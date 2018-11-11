@@ -1,5 +1,76 @@
 extends layout/page
+include modules/card/card
 
 block content
-  .container
-    img.w-100(src="http://via.placeholder.com/1200x300", alt="")
+  - var sectionList = [{title: 'SẢN PHẨM KHUYẾN MẠI', number: 5, icon: '',nav: ['SẢN PHẨM MỚI','SẢN PHẨM BÁN CHẠY']},{title: 'Tai nghe',icon: 'images/icon-headphone.png',nav: ['Tai Nghe Earbud','Tai Nghe Bluetooth']},{title: 'Máy nghe nhạc',icon: 'images/icon-music-player.png',nav: ['Máy Nghe Nhạc Lossless','Máy Nghe Nhạc Thể Thao']},{title: 'SAMPS & DACS',icon: 'images/icon-amps.png',nav: ['Acoustic Research','Astell&Kern']},{title: 'Loa di động',icon: 'images/icon-speaker.png',nav: ['Loa Vi Tính','Loa Bookshelf']},{title: 'Phụ kiện',icon: 'images/icon-speaker.png',nav: ['Túi Đựng Tai Nghe','Túi Đựng Tai Nghe',]}]
+  each section in sectionList
+    section
+      .container
+        .title-bar.rounded.mb-20
+          h2.title-bar__title.rounded-left
+            a.link-unstyled(href="#!")= section.title
+          nav.title-bar__nav.d-none.d-lg-flex
+            each navItem in section.nav
+              a.link-unstyled.js-ripple(href="#!")= navItem
+          .dropdown.ml-auto.mr-1.d-lg-none
+            button.title-bar__btn.btn.btn-dark.dropdown-toggle.py-1(data-toggle="dropdown")
+              i.fa.fa-angle-down
+            .dropdown-menu.dropdown-menu-right.shadow-sm
+              each navItem in section.nav
+                a.dropdown-item(href="#!")= navItem
+        .row.gutter-20
+          - for (let i=0; i<(section.number ? section.number : 10); i++)
+            .col-sm-6.col-md-4.col-lg-3.col-xl-20p.mb-20
+              +product
+  .container.mb-20
+    .row
+      .col-lg-8
+        section
+          h2.m-title Tin tức
+          .row
+            .col-md-6.mb-30
+              // Home news
+              article.news
+                a.d-block.link-unstyled(href="#!", title="Một huyền thoại có bước cải tiến mới sau nhiều năm")
+                  .img-wrap.img-wrap-50
+                    img(src="images/home-news-img.png", alt="")
+                  .limit-line.font-weight-600.mt-2.mb-1 Một huyền thoại có bước cải tiến mới sau nhiều năm
+                .text-12.text-gray-9.mb-1
+                  i.fa.fa-calendar
+                  |
+                  | 18/05/2018
+                .limit-line.limit-line--3 Một huyền thoại có bước cải tiến mới sau nhiều năm vẫn giữ nguyên kiểu dáng và màu sắc, giờ đây Koss đã giới thiệu hai phiên bản Porta Pros...
+            aside.col-md-6.mb-30
+              .media.mb-30.m-last-0
+                a.img-wrap.img-wrap-66.mr-3(href="#!", style="width: 120px", title="")
+                  img(src="images/news-sm.png", alt="")
+                .media-body.align-self-center
+                  a.d-block.link-unstyled.limit-line.limit-line--2.font-weight-600.mb-1(href="#!", title="") Canjam 2017 - trải nghiệm 2 mẫu tai nghe mới E1010 và H1707 của 1More
+                  .text-12.text-gray-9
+                    i.fa.fa-calendar
+                    |
+                    | 18/05/2018
+              .media.mb-30.m-last-0
+                a.img-wrap.img-wrap-66.mr-3(href="#!", style="width: 120px", title="")
+                  img(src="images/news-sm.png", alt="")
+                .media-body.align-self-center
+                  a.d-block.link-unstyled.limit-line.limit-line--2.font-weight-600.mb-1(href="#!", title="") Canjam 2017 - trải nghiệm 2 mẫu tai nghe mới E1010 và H1707 của 1More
+                  .text-12.text-gray-9
+                    i.fa.fa-calendar
+                    |
+                    | 18/05/2018
+              .media.mb-30.m-last-0
+                a.img-wrap.img-wrap-66.mr-3(href="#!", style="width: 120px", title="")
+                  img(src="images/news-sm.png", alt="")
+                .media-body.align-self-center
+                  a.d-block.link-unstyled.limit-line.limit-line--2.font-weight-600.mb-1(href="#!", title="") Canjam 2017 - trải nghiệm 2 mẫu tai nghe mới E1010 và H1707 của 1More
+                  .text-12.text-gray-9
+                    i.fa.fa-calendar
+                    |
+                    | 18/05/2018
+      .col-lg-4.mb-30
+        section.h-100.d-flex.flex-column
+          h2.m-title Video
+          .media-body
+            .embed-responsive.embed-responsive-16by9.h-100
+              <iframe width='560' height='315' src='https://www.youtube.com/embed/7A9M1EtSpzw' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>

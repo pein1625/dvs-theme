@@ -4,4 +4,14 @@
 // bootstrap
 @import '_bootstrap/bootstrap';
 
-// custom style
+@import 'scss/components/button';
+@import 'scss/components/dropdown';
+@import 'scss/components/img-wrap';
+@import 'scss/components/title';
+@import 'scss/components/title-bar';
+
+@import 'scss/layout/grid';
+@import 'scss/layout/header';
+@import 'scss/layout/aside';
+
+@import 'scss/page/index';

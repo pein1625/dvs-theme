@@ -1,2 +1,68 @@
 mixin header
-  header.header
+  header.header.text-white(style="background: url('images/night-bg.png') center/cover no-repeat;")
+    .container
+      a.link-unstyled.d-flex.align-items-center(href="#!")
+        img.mr-3(src="images/logo.png", alt="")
+        p Tai Nghe Việt
+        p.text-18.mb-0 Headphone Store
+    nav.bg-dark.text-white
+      .container
+        .row.gutter-20
+          .col-lg-3
+            .dropdown.py-1
+              .dropdown-btn.px-20.py-2.cursor-pointer.js-dropdown-toggle
+                i.fa.fa-bars.mr-3
+                strong DANH MỤC SẢN PHẨM
+              .w-100.dropdown-menu.shadow.js-dropdown-menu.d-block
+                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
+                  div(style="width: 50px;")
+                    img(src="images/icon-tag.png", alt="")
+                  .media-body.text-uppercase Khuyến mại hot
+                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
+                  div(style="width: 50px;")
+                    img(src="images/icon-headphone.png", alt="")
+                  .media-body.text-uppercase Tai nghe
+                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
+                  div(style="width: 50px;")
+                    img(src="images/icon-music-player.png", alt="")
+                  .media-body.text-uppercase Máy nghe nhạc
+                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
+                  div(style="width: 50px;")
+                    img(src="images/icon-amps.png", alt="")
+                  .media-body.text-uppercase Amps & Dacs
+                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
+                  div(style="width: 50px;")
+                    img(src="images/icon-speaker.png", alt="")
+                  .media-body.text-uppercase Loa di động
+                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
+                  div(style="width: 50px;")
+                    img(src="images/icon-dependency.png", alt="")
+                  .media-body.text-uppercase Phụ kiện
+          .col-lg-9
+            ul.nav.ml-xl--30
+              each item, index in ['Giới thiệu', 'Dịch vụ', 'Hướng dẫn mua hàng', 'Tin tức', 'Liên hệ']
+                if (index)
+                  li
+                    a.link-unstyled.d-block.js-ripple(href="#!")
+                      span.d-block.px-30.py-1.my-2= item
+                else
+                  li.dropdown.dropdown-hover-xl
+                    a.dropdown-btn.link-unstyled.d-block.js-ripple(href="#!")
+                      span.d-block.px-30.py-1.my-2= item
+                    span.dropdown-caret.js-dropdown-toggle
+                    .dropdown-menu.js-dropdown-menu
+                      a.dropdown-item(href="#!") Dropdown item
+                      a.dropdown-item(href="#!") Dropdown item
+                      .dropdown.dropdown-hover-xl.dropright
+                        a.dropdown-btn.dropdown-item(href="#!") Dropdown item
+                        span.dropdown-caret.js-dropdown-toggle
+                        .dropdown-menu.js-dropdown-menu
+                          a.dropdown-item(href="#!") Dropdown level 3
+                          a.dropdown-item(href="#!") Dropdown level 3
+                          .dropdown.dropdown-hover-xl.dropright
+                            a.dropdown-btn.dropdown-item(href="#!") Dropdown item
+                            span.dropdown-caret.js-dropdown-toggle
+                            .dropdown-menu.js-dropdown-menu
+                              a.dropdown-item(href="#!") Dropdown level 3
+                              a.dropdown-item(href="#!") Dropdown level 3
+                              a.dropdown-item(href="#!") Dropdown level 3

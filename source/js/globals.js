@@ -1,11 +1,14 @@
 $(document).ready(function(){
+  $('.js-dropdown-toggle').on('click', function(){
+    $(this).siblings('.js-dropdown-menu').slideToggle();
+  });
 });
 
-$.ripple(".btn", {
+$.ripple(".btn, .js-ripple", {
 	debug: false, // Turn Ripple.js logging on/off
 	on: 'mousedown', // The event to trigger a ripple effect
 
-	opacity: 0.15, // The opacity of the ripple
+	opacity: 0.25, // The opacity of the ripple
 	color: "auto", // Set the background color. If set to "auto", it will use the text color
 	multi: false, // Allow multiple ripples per element
 
