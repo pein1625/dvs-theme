@@ -1,19 +1,7 @@
-@import 'scss/abstracts/variable';
-@import 'scss/abstracts/mixin';
-@import 'scss/abstracts/common';
-@import 'scss/abstracts/normalize';
+// config variable
+@import 'config';
 
-@import 'scss/ultilities/color';
-@import 'scss/ultilities/typography';
-@import 'scss/ultilities/spacing';
-@import 'scss/ultilities/bootstrap-override';
+// bootstrap
+@import '_bootstrap/bootstrap';
 
-@import 'scss/components/button';
-@import 'scss/components/dropdown';
-
-@import 'scss/layout/grid';
-@import 'scss/layout/header';
-@import 'scss/layout/footer';
-@import 'scss/layout/aside';
-
-@import 'scss/page/index';
+// custom style

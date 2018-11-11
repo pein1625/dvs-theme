@@ -11,9 +11,6 @@
       ]
     },
     "bootstrap": {
-      "css": [
-        "./vendor/bootstrap/css/bootstrap.min.css"
-      ],
       "js": [
         "./vendor/bootstrap/js/bootstrap.min.js"
       ]
