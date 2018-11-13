@@ -10,7 +10,8 @@ $container-max-widths: (
 
 // add theme color
 $theme-colors: (
-  'red': #ed1c24,
+  'thuan': #f91,
+  'red': #0c0a0a,
   'pink': #d54d4d
 );
 
@@ -29,15 +30,16 @@ $spacers: (
   30: 30px,
   40: 40px,
   50: 50px,
-  60: 60px
+  60: 60px,
+  33: 33px
 );
 
 // remove input button box-shadow
 // $input-btn-focus-box-shadow: unset;
 
 // body
-$body-bg: #e9ecef;
+// $body-bg: #e9ecef;
 
 // font
-// edit font size base
+// edit font size base (font mặc định trang web là 14px)
 $font-size-base: 0.875rem !default; //The browser default typically is `16px`
