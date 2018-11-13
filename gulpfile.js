@@ -151,11 +151,11 @@ gulp.task('fonts', function () {
 // });
 
 // copy sass folder
-// gulp.task('copysass', function(){
-//   return gulp
-//     .src(source + 'sass/**/*.scss')
-//     .pipe(gulp.dest(dest + 'css/'));
-// });
+gulp.task('copysass', function(){
+  return gulp
+    .src(source + 'sass/**/*.scss')
+    .pipe(gulp.dest(dest + 'css/'));
+});
 
 // copy vendor folder
 gulp.task('copyvendor', function(){
@@ -310,7 +310,7 @@ gulp.task('build', function (cb) {
   return runSequence(
     'cleanup',
     // 'copycss',
-    // 'copysass',
+    'copysass',
     'copyvideo',
     'copyvendor',
     'compile-images',
