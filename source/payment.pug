@@ -1,0 +1,85 @@
+extends layout/page
+include modules/breadcrumb/breadcrumb
+
+block content
+  +header
+  .container
+    +breadcrumb("Trang chủ", "Đăng nhập")
+    section.container-fluid.bg-white.rounded.mb-30(style="min-height: 550px")
+      h2.text-24.font-weight-600.border-bottom.py-20.mb-3 Thanh toán
+      .row.gutter-20
+        .col-lg-8.mb-20
+          .card
+            .card-header.text-center.text-16.font-weight-700.pt-10.pb-2 THÔNG TIN MUA HÀNG
+            .card-body
+              .text-16.font-weight-bold.mb-10 THÔNG TIN NGƯỜI MUA HÀNG
+              .form-row.mb-3
+                label.col-form-label.col-md-4 Họ và tên người mua hàng
+                  span.text-danger *
+                .col-md-8
+                  input.form-control(type="text")
+              .form-row.mb-3
+                label.col-form-label.col-md-4 Số điện thoại liên lạc
+                  span.text-danger *
+                .col-md-8
+                  input.form-control(type="text")
+              .form-row.mb-3
+                label.col-form-label.col-md-4 Email
+                .col-md-8
+                  input.form-control(type="email")
+              .form-row.mb-3
+                label.col-form-label.col-md-4 Phương thức thanh toán
+                .col-md-8
+                  select.form-control
+                    option(disabled, selected) Trực tiếp khi giao hàng
+                    option ...
+              .form-row.mb-3
+                label.col-form-label.col-md-4 Địa chỉ nhận hàng
+                  span.text-danger *
+                .col-md-8
+                  input.form-control(type="text")
+              .form-row.mb-3
+                .col-md-6.mb-3
+                  select.form-control
+                    option(disabled, selected) Chọn tỉnh / thành phố
+                    option ...
+                .col-md-6.mb-3
+                  select.form-control
+                    option(disabled, selected) Chọn quận / huyện
+                    option ...
+              .form-row
+                .col-12
+                  label.form-check.mb-0
+                    input.form-check-input(type="checkbox" checked)
+                    span.form-check-label Thông tin người mua giống thông tin người nhận hàng
+        .col-lg-4
+          .card.mb-20
+            .card-header.text-center.text-16.font-weight-700.pt-10.pb-2 MÃ GIẢM GIÁ
+            .card-body
+              .text-center.mb-3 Nơi quý khách nhập “ Mã giảm giá ” để hưởng những ưu đãi từ TAI NGHE VIỆT
+              form.input-group
+                input.form-control(type="text", placeholder="Nhập mã giảm giá")
+                span.input-group-append
+                  button.input-group-text.bg-dark.text-white(type="submit") Sử dụng
+          .card.mb-20
+            .card-header.text-center.text-16.font-weight-700.pt-10.pb-2 ĐƠN HÀNG (1 SẢN PHẨM)
+            ul.list-group.list-group-flush
+              li.list-group-item
+                a.media.link-unstyled(href="#!", title="")
+                  .iwrap-100.border(style="width: 70px")
+                    img(src="images/cart-product.png", alt="")
+                  .media-body.px-10 Tai nghe Sennheiser HD660S
+                  .text-secondary.font-weight-600.text-right
+                    div 14.590.000 đ
+                    div x1
+                    div 14.590.000 đ
+              li.list-group-item.d-flex.justify-content-between.font-weight-600.text-secondary
+                span Tổng tiền hàng
+                span 14.590.000 đ
+              li.list-group-item.d-flex.justify-content-between.font-weight-600.text-secondary
+                span Chi phí vận chuyển
+                span 14.590.000 đ
+              li.list-group-item.d-flex.justify-content-between.font-weight-600.text-secondary
+                span Tổng tiền thanh toán
+                span.text-red 14.590.000 đ
+          button.btn.btn-block.btn-red.font-weight-700.py-2.mb-20 TIẾN HÀNH THANH TOÁN

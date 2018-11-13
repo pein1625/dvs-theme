@@ -1,17 +1,11 @@
-// config variable
+// config bootstrap variables
 @import 'config';
 
 // bootstrap
 @import '_bootstrap/bootstrap';
 
-@import 'scss/components/button';
-@import 'scss/components/dropdown';
-@import 'scss/components/img-wrap';
-@import 'scss/components/title';
-@import 'scss/components/title-bar';
+// Edited bootstrap components
+@import 'bootstrap_dvs/bootstrap_dvs';
 
-@import 'scss/layout/grid';
-@import 'scss/layout/header';
-@import 'scss/layout/aside';
-
-@import 'scss/page/index';
+// Additional style
+@import 'custom';

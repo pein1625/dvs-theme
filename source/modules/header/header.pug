@@ -1,68 +1,277 @@
-mixin header
+mixin header(home=false)
   header.header.text-white(style="background: url('images/night-bg.png') center/cover no-repeat;")
     .container
-      a.link-unstyled.d-flex.align-items-center(href="#!")
-        img.mr-3(src="images/logo.png", alt="")
-        p Tai Nghe Việt
-        p.text-18.mb-0 Headphone Store
+      .position-relative
+        .row.gutter-20.align-items-center
+          .col-xl-4.col-lg-5.col-md-6
+            a.link-unstyled.d-flex.align-items-center.py-12(href="#!")
+              .media
+              img.mr-3(src="images/logo.png", alt="")
+              .media-body
+                p.text-24.font-avobold.text-uppercase.mb-2 Tai Nghe Việt
+                p.text-18.mb-0 Headphone Store
+          .col-xl-4.col-lg-7.col-md-6
+            form.search
+              .input-group.text-white(action="#!")
+                select.form-control
+                  option Tất cả
+                  option Thử text dài hơn xem thế nào
+                input.form-control(type="text", placeholder="Tìm kiếm sản phẩm")
+                span.input-group-append
+                  button.input-group-text(type="submit")
+                    i.fa.fa-search
+          .col-xl-4.d-none.d-xl-block
+            .text-20.font-weight-800.my-12.text-center.text-md-right
+              i.fa.fa-phone
+              span Hotline: 0932.347.414
+          .col-12.position-static
+            .header-links.text-white.d-flex.justify-content-between.py-2
+              a.m-last-0.link-unstyled(href="#!")
+                i.fa.fa-shopping-cart.mr-1
+                span Giỏ hàng (0)
+              a.m-last-0.link-unstyled(href="#!")
+                i.fa.fa-pencil-square-o.mr-1
+                span Đăng ký
+              a.m-last-0.link-unstyled(href="#!")
+                i.fa.fa-lock.mr-1
+                span Đăng nhập
     nav.bg-dark.text-white
       .container
-        .row.gutter-20
-          .col-lg-3
-            .dropdown.py-1
-              .dropdown-btn.px-20.py-2.cursor-pointer.js-dropdown-toggle
-                i.fa.fa-bars.mr-3
-                strong DANH MỤC SẢN PHẨM
-              .w-100.dropdown-menu.shadow.js-dropdown-menu.d-block
-                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
-                  div(style="width: 50px;")
-                    img(src="images/icon-tag.png", alt="")
-                  .media-body.text-uppercase Khuyến mại hot
-                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
-                  div(style="width: 50px;")
-                    img(src="images/icon-headphone.png", alt="")
-                  .media-body.text-uppercase Tai nghe
-                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
-                  div(style="width: 50px;")
-                    img(src="images/icon-music-player.png", alt="")
-                  .media-body.text-uppercase Máy nghe nhạc
-                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
-                  div(style="width: 50px;")
-                    img(src="images/icon-amps.png", alt="")
-                  .media-body.text-uppercase Amps & Dacs
-                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
-                  div(style="width: 50px;")
-                    img(src="images/icon-speaker.png", alt="")
-                  .media-body.text-uppercase Loa di động
-                a.link-unstyled.media.align-items-center.border-bottom.border-last-0.js-ripple(href="#!", style="height: 63px;")
-                  div(style="width: 50px;")
-                    img(src="images/icon-dependency.png", alt="")
-                  .media-body.text-uppercase Phụ kiện
-          .col-lg-9
-            ul.nav.ml-xl--30
-              each item, index in ['Giới thiệu', 'Dịch vụ', 'Hướng dẫn mua hàng', 'Tin tức', 'Liên hệ']
-                if (index)
-                  li
-                    a.link-unstyled.d-block.js-ripple(href="#!")
-                      span.d-block.px-30.py-1.my-2= item
-                else
-                  li.dropdown.dropdown-hover-xl
-                    a.dropdown-btn.link-unstyled.d-block.js-ripple(href="#!")
-                      span.d-block.px-30.py-1.my-2= item
-                    span.dropdown-caret.js-dropdown-toggle
-                    .dropdown-menu.js-dropdown-menu
-                      a.dropdown-item(href="#!") Dropdown item
-                      a.dropdown-item(href="#!") Dropdown item
-                      .dropdown.dropdown-hover-xl.dropright
-                        a.dropdown-btn.dropdown-item(href="#!") Dropdown item
-                        span.dropdown-caret.js-dropdown-toggle
-                        .dropdown-menu.js-dropdown-menu
-                          a.dropdown-item(href="#!") Dropdown level 3
-                          a.dropdown-item(href="#!") Dropdown level 3
-                          .dropdown.dropdown-hover-xl.dropright
-                            a.dropdown-btn.dropdown-item(href="#!") Dropdown item
-                            span.dropdown-caret.js-dropdown-toggle
-                            .dropdown-menu.js-dropdown-menu
-                              a.dropdown-item(href="#!") Dropdown level 3
-                              a.dropdown-item(href="#!") Dropdown level 3
-                              a.dropdown-item(href="#!") Dropdown level 3
+        .d-flex.justify-content-between.d-xl-none.align-items-baseline
+          button.border-0.bg-transparent.text-white.text-16.py-2.js-mb-menu-btn
+            i.fa.fa-bars
+            span Menu
+          .text-16.font-weight-700.text-center.text-md-right
+            i.fa.fa-phone
+            span Hotline: 0932.347.414
+        .navbar-backdrop.js-mb-filter
+        .navbar.navbar-mobile.navbar-expand-xl.p-0.js-mb-menu
+          .row.gutter-20
+            .col-xl-3
+              .navbar-nav
+                .dropdown.py-1.w-100.position-static
+                  .dropdown-btn.px-20.py-2.cursor-pointer.js-dropdown-toggle
+                    i.fa.fa-bars.mr-3
+                    strong DANH MỤC SẢN PHẨM
+                  .w-100.dropdown-menu.bg-transparent.py-0.px-10.rounded-0.js-dropdown-menu(class=home ? "d-xl-block" : "")
+                    .px-10.bg-gray-200.shadow
+                      .dropdown.dropright.dropdown-hover-lg.position-static
+                        a.d-block.link-unstyled.border-bottom-dashed.border-secondary.border-last-0.js-ripple(href="#!")
+                          .media.align-items-center
+                            .d-flex.align-items-center.justify-content-center(style="width: 55px; height: 60px;")
+                              img(src="images/icon-tag.png", alt="")
+                            .media-body.text-uppercase Khuyến mại hot
+                        .dropdown-menu.mega-menu
+                          .row
+                            .col-lg-6
+                              .text-14.font-weight-bold.text-uppercase.border-bottom-dashed.mb-2.py-20 Phân loại
+                              .row
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe In Ear
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai nghe Ear Bud
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai nghe On Ear
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Over Ear
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Clip On
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Custom
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Universal
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Chống Ồn
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Bluetooth
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe True Wireless
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe DJ
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Thể
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") ThaoTai Nghe Chơi Game
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Có Mic
+                            .col-lg-6
+                              .text-14.font-weight-bold.text-uppercase.border-bottom-dashed.mb-2.py-20 Thương hiệu
+                              .row
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Sony
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") 64 Audio
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") AAW
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") ADL
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Akg
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Astell & Kern
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Audio-technica
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Auglamour
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Aurisonics
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") BaldoorBeats
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Beyerdynamic
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Bluedio
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Bose
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Campfire
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Creative
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Denon
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Grado
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Hifiman
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Jabra
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Sennheiser
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Shozy
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Shure
+                      .dropdown.dropright.dropdown-hover-lg.position-static
+                        a.d-block.link-unstyled.border-bottom-dashed.border-secondary.border-last-0.js-ripple(href="#!")
+                          .media.align-items-center
+                            .d-flex.align-items-center.justify-content-center(style="width: 55px; height: 60px;")
+                              img(src="images/icon-headphone.png", alt="")
+                            .media-body.text-uppercase Tai nghe
+                        .dropdown-menu.mega-menu
+                          .row
+                            .col-lg-6
+                              .text-14.font-weight-bold.text-uppercase.border-bottom-dashed.mb-2.py-20 Phân loại 2222222
+                              .row
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe In Ear
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai nghe Ear Bud
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai nghe On Ear
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Over Ear
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Clip On
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Custom
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Universal
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Chống Ồn
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Bluetooth
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe True Wireless
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe DJ
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Thể
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") ThaoTai Nghe Chơi Game
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Tai Nghe Có Mic
+                            .col-lg-6
+                              .text-14.font-weight-bold.text-uppercase.border-bottom-dashed.mb-2.py-20 Thương hiệu
+                              .row
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Sony
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") 64 Audio
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") AAW
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") ADL
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Akg
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Astell & Kern
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Audio-technica
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Auglamour
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Aurisonics
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") BaldoorBeats
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Beyerdynamic
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Bluedio
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Bose
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Campfire
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Creative
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Denon
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Grado
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Hifiman
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Jabra
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Sennheiser
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Shozy
+                                .col-md-6
+                                  a.link-unstyled.d-block.mb-6(href="#!") Shure
+                      a.d-block.link-unstyled.border-bottom-dashed.border-secondary.border-last-0.js-ripple(href="#!")
+                        .media.align-items-center
+                          .d-flex.align-items-center.justify-content-center(style="width: 55px; height: 60px;")
+                            img(src="images/icon-music-player.png", alt="")
+                          .media-body.text-uppercase Máy nghe nhạc
+                      a.d-block.link-unstyled.border-bottom-dashed.border-secondary.border-last-0.js-ripple(href="#!")
+                        .media.align-items-center
+                          .d-flex.align-items-center.justify-content-center(style="width: 55px; height: 60px;")
+                            img(src="images/icon-amps.png", alt="")
+                          .media-body.text-uppercase Amps & Dacs
+                      a.d-block.link-unstyled.border-bottom-dashed.border-secondary.border-last-0.js-ripple(href="#!")
+                        .media.align-items-center
+                          .d-flex.align-items-center.justify-content-center(style="width: 55px; height: 60px;")
+                            img(src="images/icon-speaker.png", alt="")
+                          .media-body.text-uppercase Loa di động
+                      a.d-block.link-unstyled.border-bottom-dashed.border-secondary.border-last-0.js-ripple(href="#!")
+                          .media.align-items-center
+                            .d-flex.align-items-center.justify-content-center(style="width: 55px; height: 60px;")
+                              img(src="images/icon-dependency.png", alt="")
+                            .media-body.text-uppercase Phụ kiện
+            .col-xl-9
+              ul.navbar-nav
+                each item, index in ['Giới thiệu', 'Dịch vụ', 'Hướng dẫn mua hàng', 'Tin tức', 'Liên hệ']
+                  if (index)
+                    li
+                      a.link-unstyled.d-block.js-ripple(href="#!")
+                        span.d-block.px-30.py-1.my-2= item
+                  else
+                    li.dropdown.dropdown-hover-xl
+                      a.dropdown-btn.link-unstyled.d-block.js-ripple(href="#!")
+                        span.d-block.px-30.py-1.my-2= item
+                      span.dropdown-caret.dropdown-caret-light.js-dropdown-toggle
+                      .dropdown-menu.js-dropdown-menu
+                        a.dropdown-item(href="#!") Dropdown item
+                        a.dropdown-item(href="#!") Dropdown item
+                        .dropdown.dropdown-hover-xl.dropright
+                          a.dropdown-btn.dropdown-item(href="#!") Dropdown item
+                          span.dropdown-caret.js-dropdown-toggle
+                          .dropdown-menu.js-dropdown-menu
+                            a.dropdown-item(href="#!") Dropdown level 3
+                            a.dropdown-item(href="#!") Dropdown level 3
+                            .dropdown.dropdown-hover-xl.dropright
+                              a.dropdown-btn.dropdown-item(href="#!") Dropdown item
+                              span.dropdown-caret.js-dropdown-toggle
+                              .dropdown-menu.js-dropdown-menu
+                                a.dropdown-item(href="#!") Dropdown level 3
+                                a.dropdown-item(href="#!") Dropdown level 3
+                                a.dropdown-item(href="#!") Dropdown level 3

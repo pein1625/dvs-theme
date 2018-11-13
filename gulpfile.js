@@ -100,10 +100,10 @@ gulp.task('watch', function (cb) {
     gulp.start('compile-styles');
   });
 
-  // $.watch(source + '/images/**/*', function () {
-  //   gulp.start('compile-images');
-  //   gulp.start('build-images-name');
-  // });
+  $.watch(source + '/images/**/*', function () {
+    gulp.start('compile-images');
+    gulp.start('build-images-name');
+  });
 
   // $.watch([
   //   source + '/*.html',

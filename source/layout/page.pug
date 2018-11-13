@@ -1,16 +1,24 @@
 include ../modules/head/head
 include ../modules/header/header
 include ../modules/footer/footer
+include ../modules/widgets/widgets
+include ../modules/modal/modal
 
 doctype html
 html(lang="vi")
   +head(head)
   body
-    +header
-    // end header
+    // header
     block content
+
+    // widgets: brands news videos
+    +widgets
+
+    // footer
     +footer
-    // end footer
+
+    // cart modal
+    +cart
 
     // javascript library
     +script(head)

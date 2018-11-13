@@ -1,0 +1,39 @@
+// a tag unstyled
+.link-unstyled {
+  &,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// add more font weight
+$font-weight-list: 300 400 500 600 700 800 900;
+@each $item in $font-weight-list {
+  .font-weight-#{$item} {
+    font-weight: #{$item} !important;
+  }
+}
+
+// add more font-size
+$font-size-list: 10 12 13 14 15 16 18 20 22 24 25 26 28 30;
+@each $item in $font-size-list {
+  .text-#{$item} {
+    font-size: #{$item}px !important;
+  }
+}
+
+// add limit line for text
+%max-line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: $line-height-base;
+}
+@each $item in 1 2 3 4 5 6 7 8 9 10 {
+  .max-line-#{$item} {
+    @extend %max-line;
+    -webkit-line-clamp: #{$item};
+    max-height: #{$item * 1.5}em;
+  }
+}

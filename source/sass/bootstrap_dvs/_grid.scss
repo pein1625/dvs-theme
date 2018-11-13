@@ -1,0 +1,25 @@
+// add gutter
+.gutter-20 {
+  margin: 0 -10px;
+  & > [class^='col'] {
+    padding: 0 10px;
+  }
+}
+
+// add column 20% (5 items in a row)
+.col-20 {
+  flex: 0 0 20%;
+  max-width: 20%;
+  padding: 0 15px;
+}
+@each $key, $val in $grid-breakpoints {
+  .col-#{$key}-20 {
+    padding: 0 15px;
+  }
+  @media (min-width: #{$val}) {
+    .col-#{$key}-20 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+}

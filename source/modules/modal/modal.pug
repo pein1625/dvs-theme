@@ -1,0 +1,55 @@
+mixin cart
+  .md-cart.modal.fade(role="dialog")
+    .md-cart__dialog.modal-dialog.modal-lg(role="document")
+      .md-cart__content.modal-content
+        button.md-cart__close(type="button", data-dismiss="modal") X
+        h3.md-cart__heading
+          img(src="images/icon-cart-black.png", alt="")
+          span Giỏ hàng của tôi
+        table.md-tbl.text-20
+          thead.md-tbl__thead.text-14
+            tr
+              th.md-tbl__th Tên sản phẩm
+              th.md-tbl__th.md-tbl__th--min Giá
+              th.md-tbl__th.md-tbl__th--min Số lượng
+              th.md-tbl__th.md-tbl__th--min Thành tiền
+          tbody.md-tbl__body
+            tr.md-tbl__tr
+              td.md-tbl__td.md-tbl__td--left
+                a.media.align-items-center.link-unstyled(href="#!")
+                  .iwrap-56.border.rounded.mr-30(style="width: 110px;")
+                    img(src="images/cart-img.png", alt="")
+                  .media-body Tai nghe Sennheiser HD660S
+              td.md-tbl__td.md-tbl__td--min 270.000 VNĐ
+              td.md-tbl__td.md-tbl__td--min
+                .input-group.input-group-sm.flex-nowrap
+                  span.input-group-prepend.js-number-btn(data-plus="-1")
+                    span.input-group-text
+                      i.fa.fa-minus
+                  input.form-control.text-center.js-number-value(type="text", value="1", size="1", style="width: 40px")
+                  span.input-group-append.js-number-btn(data-plus="1")
+                    span.input-group-text
+                      i.fa.fa-plus
+              td.md-tbl__td.md-tbl__td--min 270.000 VNĐ
+            tr.md-tbl__tr
+              td.md-tbl__td.md-tbl__td--left
+                a.media.align-items-center.link-unstyled(href="#!")
+                  .iwrap-56.border.rounded.mr-30(style="width: 110px;")
+                    img(src="images/cart-img.png", alt="")
+                  .media-body Tai nghe Sennheiser HD660S
+              td.md-tbl__td.md-tbl__td--min 270.000 VNĐ
+              td.md-tbl__td.md-tbl__td--min
+                .input-group.input-group-sm.flex-nowrap
+                  span.input-group-prepend.js-number-btn(data-plus="-1")
+                    span.input-group-text
+                      i.fa.fa-minus
+                  input.form-control.text-center.js-number-value(type="text", value="1", size="1", style="width: 40px")
+                  span.input-group-append.js-number-btn(data-plus="1")
+                    span.input-group-text
+                      i.fa.fa-plus
+              td.md-tbl__td.md-tbl__td--min 270.000 VNĐ
+        .md-cart__text
+          .md-cart__total Tổng tiền: 270.000 VNĐ
+        .md-cart__btnwrap
+          a.md-cart__btn.eff-btn-filter.rounded(href="#!") Tiếp tục mua hàng
+          a.md-cart__btn.md-cart__btn--red.eff-btn-filter.rounded(href="#!") Mua hàng

@@ -1,0 +1,19 @@
+mixin title-bar(title="title", icon="", ...navList)
+  nav.d-flex.rounded.mb-20(class= navList ? "bg-dark" : "")
+    h2.heading.rounded-left
+      a.media.link-unstyled.py-2.pr-20(href="#!", class=icon ? "" : "pl-20")
+        if (icon)
+          .iwrap-maxwidth.px-2(style="width: 64px; height: 24px;")
+            img(src=icon, alt="")
+        .media-body= title
+    if (navList.length)
+      .d-none.d-lg-flex.text-white
+        each item in navList
+          a.link-unstyled.d-block.px-20.pt-10.pb-2.js-ripple(href="#!")= item
+      .dropdown.ml-auto.mr-1.d-lg-none
+        button.text-16.title-bar__btn.btn.btn-dark.dropdown-toggle.py-1(data-toggle="dropdown", style="margin: 3px 0;")
+          i.fa.fa-bars
+          //- i.fa.fa-angle-down
+        .dropdown-menu.dropdown-menu-right.shadow-sm
+          each item in navList
+            a.dropdown-item(href="#!")= item

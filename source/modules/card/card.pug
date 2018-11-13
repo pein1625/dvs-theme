@@ -1,13 +1,13 @@
-mixin product
+mixin product(omitShadow = false)
   // product
-  .card.border-0.shadow.h-100.mx-auto(style="max-width: 250px")
+  .card.border-0.h-100.mx-auto(style="max-width: 250px", class=omitShadow ? "" : "shadow")
     .card-body.d-flex.flex-column.p-2.pb-3
       a.d-block.link-unstyled(href="#!")
-        .img-wrap
+        .iwrap-100
           img(src="images/product-img.png", alt="")
         .text-center.my-2 Tai nghe True Wireless Padmade Pamu X13
       .text-center.mb-4
-        span.mx-1.text-16 14.590.000đ
-        del.mx-1 1.490.000đ
+        span.text-16 14.590.000đ
+        del.ml-2 1.490.000đ
       .text-center.mt-auto
-        a.btn.btn-dark(href="#!") Thêm vào giỏ hàng
+        a.btn.btn-dark(href=".md-cart", data-toggle="modal") Thêm vào giỏ hàng

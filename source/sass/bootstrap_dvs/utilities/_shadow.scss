@@ -1,0 +1,12 @@
+.shadow-border {
+  background-color: inherit;
+  box-shadow: 0 0 0 1px $border-color !important;
+}
+@each $color, $value in $theme-colors {
+  .shadow-border-#{$color} {
+    box-shadow: 0 0 0 1px $value !important;
+  }
+}
+.shadow-border-white {
+  box-shadow: 0 0 0 1px $white !important;
+}

@@ -1,0 +1,54 @@
+extends layout/page
+include modules/breadcrumb/breadcrumb
+
+block content
+  +header
+  .container
+    +breadcrumb('Trang chủ', 'Liên hệ')
+    .row.gutter-20.py-30
+      .col-lg-6.mb-20.d-flex.flex-column
+        h2.text-20.font-weight-bold LIÊN HỆ VỚI CHÚNG TÔI
+        .text-16.mb-3(style="line-height: 30px;")
+          strong SLAUDIO - TAI NGHE VIỆT
+          br
+          | Cơ sở 1: Số 4, Ngõ 30, Phố Trần Quý Kiên, Cầu Giấy, Hà Nội.
+          br
+          | Cơ sở 2: 146 Nguyễn Thái Học, Ba Đình, Hà Nội
+          br
+          | Hotline: 0932.347414
+          br
+          | Email: taingheviet@gmail.com
+        .border.rounded.media-body.embed-responsive(style="min-height: 200px")
+          <iframe src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1521.2869548164276!2d105.7911825956902!3d21.02174590609183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1527752170985' width='800' height='600' frameborder='0' style='border:0' allowfullscreen></iframe>
+      .col-lg-6.mb-20
+        form.card.card-body
+          .form-row
+            .col-xl-9.col-lg-8.offset-xl-3.offset-lg-4.text-center
+              h2.text-center.text-20.font-weight-bold.mb-10 THÔNG TIN
+          .form-row.mb-3
+            label.col-form-label.col-xl-3.col-lg-4 Họ và tên
+              span.text-danger *
+            .col-xl-9.col-lg-8
+              input.form-control(type="text")
+          .form-row.mb-3
+            label.col-form-label.col-xl-3.col-lg-4 Số điện thoại
+              span.text-danger *
+            .col-xl-9.col-lg-8
+              input.form-control(type="text")
+          .form-row.mb-3
+            label.col-form-label.col-xl-3.col-lg-4 Email
+              span.text-danger *
+            .col-xl-9.col-lg-8
+              input.form-control(type="text")
+          .form-row.mb-3
+            label.col-form-label.col-xl-3.col-lg-4 Tiêu đề
+            .col-xl-9.col-lg-8
+              input.form-control(type="text")
+          .form-row.mb-3
+            label.col-form-label.col-xl-3.col-lg-4 Nội dung
+              span.text-danger *
+            .col-xl-9.col-lg-8
+              textarea.form-control(rows="4")
+          .form-row
+            .col-xl-9.col-lg-8.offset-xl-3.offset-lg-4.text-center
+              button.btn.btn-dark.font-weight-bold(type="submit") LIÊN HỆ NGAY
