@@ -1,7 +1,7 @@
 $(document).ready(function(){
-  $('.dropdown-caret').on('click', function(e){
+  $('.js-dropdown-toggle').on('click', function(e){
     e.preventDefault();
-    $(this).parent().siblings('.dropdown-menu').slideToggle();
+    $(this).parent().siblings('.js-dropdown-menu').slideToggle();
   });
 
   $('.js-mb-menu-btn').on('click', function(){
