@@ -20,7 +20,11 @@
     }
   }
 }
+.navbar {
+  padding: 0;
+}
 .navbar-mobile {
+  display: block;
   position: fixed;
   z-index: $zindex-fixed;
   top: 0;
@@ -31,7 +35,6 @@
   background-color: $gray-800;
   transition: .3s;
   align-items: flex-start;
-  display: block;
   &.is-show {
     left: 0;
   }
