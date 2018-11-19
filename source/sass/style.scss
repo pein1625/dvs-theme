@@ -1,8 +1,11 @@
 // config bootstrap variables
 @import 'config';
 
-// bootstrap
+// add bootstrap source code
 @import '_bootstrap/bootstrap';
 
-// Edited bootstrap components
-@import 'bootstrap_dvs/bootstrap_dvs';
+// add bootstrap override components
+@import 'bootstrap-override/bootstrap-override';
+
+// additional components
+@import 'components/components';

@@ -22,3 +22,10 @@ button, label {
 .cursor-pointer {
   cursor: pointer;
 }
+.link-unstyled {
+  &,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,40 @@
+// table responsive
+@mixin table-responsive {
+  thead {
+    display: none;
+  }
+  tbody,
+  tr,
+  td {
+    display: block;
+  }
+  tr {
+    &:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  }
+  td {
+    position: relative;
+    padding-left: 40%;
+    text-align: left;
+  }
+  .mb-title {
+    display: inline-block;
+    max-width: 40%;
+    font-weight: bold;
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.mb-title {
+  display: none;
+}
+@each $key, $val in $grid-breakpoints {
+  @media (max-width: #{$val - 1}) {
+    .table-expand-#{$key} {
+      @include table-responsive;
+    }
+  }
+}

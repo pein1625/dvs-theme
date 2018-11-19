@@ -1,5 +1,10 @@
 // OVERRIDE BOOTSTRAP VARIABLE
 
+// Commmon color
+$gray-9: #999999;
+$gray-6: #666666;
+$gray-3: #333333;
+
 // override container max-width
 $container-max-widths: (
   sm: 540px,
@@ -9,14 +14,9 @@ $container-max-widths: (
 );
 
 // add theme color
-$theme-colors: (
-  'thuan': #f91,
-  'red': #0c0a0a,
-  'pink': #d54d4d
-);
+// $theme-colors: ();
 
 // edit line-height
-$line-height-base: 1.5;
 $headings-line-height: 1.5;
 
 // add more spacers
@@ -30,11 +30,10 @@ $spacers: (
   40: 40px,
   50: 50px,
   60: 60px,
-  33: 33px
 );
 
 // remove input button box-shadow
-// $input-btn-focus-box-shadow: unset;
+$input-btn-focus-box-shadow: unset;
 
 // body
 // $body-bg: #e9ecef;
@@ -42,3 +41,18 @@ $spacers: (
 // font
 // edit font size base (font mặc định trang web là 14px)
 $font-size-base: 0.875rem !default; //The browser default typically is `16px`
+
+// Navbar
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+
+// Carousel
+$carousel-control-width: 10%;
+
+// Breadcrumbs
+$breadcrumb-padding-y: 1rem;
+$breadcrumb-padding-x: 0;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-bg: 0;
+$breadcrumb-divider: quote("/");
+$breadcrumb-border-radius: 0;

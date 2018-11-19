@@ -1,0 +1,43 @@
+mixin social-sticky
+  ul.social-sticky.js-social-sticky
+    li.social-sticky__item
+      a.btn.btn-icon.btn-facebook.rounded-circle(href="#md-search", data-toggle="modal")
+        i.fa.fa-search
+    li.social-sticky__item
+      a.btn.btn-icon.btn-facebook.rounded-circle(href="#!")
+        i.fa.fa-facebook
+    li.social-sticky__item
+      a.btn.btn-icon.btn-google-plus.rounded-circle(href="#!")
+        i.fa.fa-google-plus
+    li.social-sticky__item
+      a.btn.btn-icon.btn-linkedin.rounded-circle(href="#!")
+        i.fa.fa-linkedin
+    li.social-sticky__item
+      a.btn.btn-icon.btn-twitter.rounded-circle(href="#!")
+        i.fa.fa-twitter
+    li.social-sticky__item
+      a.btn.btn-icon.btn-pinterest.rounded-circle(href="#!")
+        i.fa.fa-phone
+    li.social-sticky__item
+      a.btn.btn-icon.btn-pinterest.rounded-circle(href="#!")
+        i.fa.fa-pinterest
+  button.btn.btn-icon.rounded-circle.btn-dark.social-sticky-btn.is-show.js-social-btn(type="button")
+    i.fa.fa-arrow-left
+
+mixin md-search
+  article#md-search.modal.fade(role='dialog')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          h5.modal-title Tìm kiếm
+          button.close(type='button', data-dismiss='modal')
+            span &times;
+        .modal-body
+          form(action="#!")
+            .input-group
+              input.form-control(type="text", placeholder="Nhập từ khoá tìm kiếm...")
+              span.input-group-append
+                button.input-group-text(type="submit")
+                  i.fa.fa-search
+        .modal-footer
+          button.btn.btn-sm.btn-secondary(data-dismiss='modal') Đóng

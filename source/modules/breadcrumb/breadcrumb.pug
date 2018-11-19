@@ -1,8 +1,7 @@
 mixin breadcrumb(...list)
   - var lastItem = list.pop()
-  nav
-    ol.breadcrumb.border-bottom.border-secondary.rounded-0.px-0.mb-20
-      each item in list
-        li.breadcrumb-item
-          a.link-unstyled(href="#!")= item
-      li.breadcrumb-item.active= lastItem
+  ol.breadcrumb
+    each item in list
+      li.breadcrumb-item
+        a.link-unstyled(href="#!")= item
+    li.breadcrumb-item.active= lastItem
