@@ -1,10 +1,19 @@
 include ../modules/head/head
+include ../modules/header/header
+include ../modules/footer/footer
 
 doctype html
 html(lang="vi")
   +head(head)
   body
+    // header
+    +header
+
+    // main content
     block content
+
+    // footer
+    +footer
 
     // javascript library
     +script(head)

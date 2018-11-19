@@ -1,9 +1,6 @@
 body {
   color: $gray-800;
   font-family: Arial, Helvetica, sans-serif;
-  &.no-scroll {
-    overflow: hidden;
-  }
 }
 a,input,button,textarea,select {
   &,&:focus {

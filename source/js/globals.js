@@ -4,12 +4,12 @@ $(document).ready(function(){
     $(this).parent().siblings('.js-dropdown-menu').slideToggle();
   });
 
-  $('.js-mb-menu-btn').on('click', function(){
-    $('.js-mb-menu, .js-mb-filter').addClass('is-show');
-    $('body').addClass('no-scroll');
+  $('.navbar-mobile-btn').on('click', function(){
+    $('.navbar-mobile, .navbar-backdrop').addClass('is-show');
+    $('body').addClass('over-hidden');
   });
-  $('.js-mb-filter, .js-mb-menu-close').on('click', function(){
-    $('.js-mb-menu, .js-mb-filter').removeClass('is-show');
-    $('body').removeClass('no-scroll');
+  $('.navbar-backdrop, .navbar-mobile-close').on('click', function(){
+    $('.navbar-mobile, .navbar-backdrop').removeClass('is-show');
+    $('body').removeClass('over-hidden');
   });
 });

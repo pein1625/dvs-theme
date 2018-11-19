@@ -1,3 +1,20 @@
+@each $key, $val in $theme-colors {
+  .btn-#{$key} {
+    box-shadow:
+      0 2px 2px rgba($val, .14),
+      0 3px 1px -2px rgba($val,.2),
+      0 1px 5px 0 rgba($val,.12);
+    transition: .3s;
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow:
+        0 14px 26px -12px rgba($val,.42),
+        0 4px 23px 0 rgba(0,0,0,.12),
+        0 8px 10px -5px rgba($val,.2) !important;
+    }
+  }
+}
 .btn-icon {
   width: 41px;
   height: 41px;
@@ -93,4 +110,11 @@ $btn-social: (
       opacity: 0;
     }
   }
+}
+.btn-movetop {
+  display: none;
+  position: fixed;
+  z-index: $zindex-sticky;
+  bottom: 30px;
+  right: 30px;
 }
