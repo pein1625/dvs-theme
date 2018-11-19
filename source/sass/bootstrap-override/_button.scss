@@ -31,6 +31,9 @@ $btn-social: (
   linkedin: #086ca5,
   pinterest: #bf1f24,
   youtube: #e73a35,
+  skype: #00aff0,
+  messenger: #1E88E5,
+  zalo: #0080c8
 );
 @each $key, $val in $btn-social {
   .btn-#{$key} {
