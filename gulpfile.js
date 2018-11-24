@@ -310,7 +310,7 @@ gulp.task('build', function (cb) {
   return runSequence(
     'cleanup',
     // 'copycss',
-    'copysass',
+    // 'copysass',
     'copyvideo',
     'copyvendor',
     'compile-images',

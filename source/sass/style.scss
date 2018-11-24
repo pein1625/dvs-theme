@@ -1,11 +1,27 @@
-// config bootstrap variables
-@import 'config';
+// import bootstrap override (config) variables
+@import 'scss/bootstrap-override-variables';
 
-// add bootstrap source code
-@import '_bootstrap/bootstrap';
+// import bootstrap source
+@import 'scss/_bootstrap/bootstrap';
 
-// add bootstrap override components
-@import 'bootstrap-override/bootstrap-override';
+// import additional style
+@import 'scss/abstracts/variables';
+@import 'scss/abstracts/function';
+@import 'scss/abstracts/mixin';
+@import 'scss/abstracts/normalize';
 
-// additional components
-@import 'components/components';
+@import 'scss/utilities/border';
+@import 'scss/utilities/iwrap';
+@import 'scss/utilities/shadow';
+@import 'scss/utilities/spacing';
+@import 'scss/utilities/text';
+
+@import 'scss/components/button';
+@import 'scss/components/dropdown';
+@import 'scss/components/grid';
+@import 'scss/components/navbar';
+@import 'scss/components/pagination';
+@import 'scss/components/table';
+
+@import 'scss/layouts/header';
+@import 'scss/layouts/footer';

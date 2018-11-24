@@ -1,11 +1,5 @@
-// OVERRIDE BOOTSTRAP VARIABLE
+// BOOTSTRAP OVERRIDE  VARIABLES
 
-// Commmon color
-$gray-9: #999999;
-$gray-6: #666666;
-$gray-3: #333333;
-
-// override container max-width
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -13,14 +7,12 @@ $container-max-widths: (
   xl: 1200px
 );
 
-// add theme color
 // $theme-colors: ();
 
-// edit line-height
 $headings-line-height: 1.5;
 
-// add more spacers
 $spacers: (
+  2: 2px,
   6: 6px,
   10: 10px,
   12: 12px,
@@ -32,12 +24,7 @@ $spacers: (
   60: 60px,
 );
 
-// body
-// $body-bg: #e9ecef;
-
-// font
-// edit font size base (font mặc định trang web là 14px)
-$font-size-base: 0.875rem !default; //The browser default typically is `16px`
+$font-size-base: 0.875rem !default; // The browser default typically is `16px`
 
 // Navbar
 $navbar-padding-y: 0;
@@ -47,9 +34,9 @@ $navbar-padding-x: 0;
 $carousel-control-width: 10%;
 
 // Breadcrumbs
-$breadcrumb-padding-y: 1rem;
+// $breadcrumb-padding-y: 1rem;
 $breadcrumb-padding-x: 0;
 $breadcrumb-margin-bottom: 0;
 $breadcrumb-bg: 0;
-$breadcrumb-divider: quote("/");
+// $breadcrumb-divider: quote("/");
 $breadcrumb-border-radius: 0;
