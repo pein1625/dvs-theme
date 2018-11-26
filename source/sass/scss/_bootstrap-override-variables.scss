@@ -1,5 +1,7 @@
 // BOOTSTRAP OVERRIDE  VARIABLES
 
+// $enable-rounded: false;
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -24,7 +26,9 @@ $spacers: (
   60: 60px,
 );
 
-$font-size-base: 0.875rem !default; // The browser default typically is `16px`
+$font-size-base: 0.875rem !default; // The browser default typically is `16px` -> change to 14px
+
+// $form-check-input-gutter: 1.875rem;
 
 // Navbar
 $navbar-padding-y: 0;
