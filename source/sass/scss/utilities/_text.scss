@@ -1,15 +1,15 @@
 // add more font weight
 $font-weight-list: 300 400 500 600 700 800 900;
 @each $item in $font-weight-list {
-  .font-weight-#{$item} {
+  .font-#{$item} {
     font-weight: #{$item} !important;
   }
 }
 
 // add more font-size
-$font-size-list: 10 12 13 14 15 16 18 20 22 24 25 26 28 30;
+$font-size-list: 8 10 12 13 14 15 16 18 20 22 24 25 26 28 30;
 @each $item in $font-size-list {
-  .text-#{$item} {
+  .font-#{$item} {
     font-size: #{$item}px !important;
   }
 }
