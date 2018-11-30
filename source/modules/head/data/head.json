@@ -59,29 +59,29 @@
     },
     "bootstrap-datepicker": {
       "css": [
-        "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css",
-        "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.standalone.min.css"
+        "./vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css",
+        "./vendor/bootstrap-datepicker/css/bootstrap-datepicker.standalone.min.css"
       ],
       "js": [
-        "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"
+        "./vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
       ]
     },
     "clockpicker": {
       "css": [
-        "https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.min.css"
+        "./vendor/clockpicker/css/bootstrap-clockpicker.min.css"
       ],
       "js": [
-        "https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.min.js"
+        "./vendor/clockpicker/js/bootstrap-clockpicker.min.js"
       ]
     },
     "photoswipe": {
       "css": [
-        "https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css",
-        "https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css"
+        "./vendor/photoswipe/photoswipe.min.css",
+        "./vendor/photoswipe/photoswipe-default-skin.min.css"
       ],
       "js": [
-        "https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js",
-        "https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"
+        "./vendor/photoswipe/photoswipe.min.js",
+        "./vendor/photoswipe/photoswipe-ui-default.min.js"
       ]
     },
     "moment": {
@@ -97,6 +97,11 @@
     "clndr": {
       "js": [
         "https://cdnjs.cloudflare.com/ajax/libs/clndr/1.4.7/clndr.min.js"
+      ]
+    },
+    "elevatezoom": {
+      "js": [
+        "./vendor/elevatezoom/elevatezoom.min.js"
       ]
     }
   }
