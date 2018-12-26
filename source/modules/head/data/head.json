@@ -84,6 +84,14 @@
         "./vendor/photoswipe/photoswipe-ui-default.min.js"
       ]
     },
+    "swiper": {
+      "css": [
+        "./vendor/swiper/css/swiper.min.css"
+      ],
+      "js": [
+        "./vendor/swiper/js/swiper.min.js"
+      ]
+    },
     "moment": {
       "js": [
         "./vendor/moment/moment.min.js"
