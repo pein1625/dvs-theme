@@ -1,0 +1,31 @@
+mixin checkbox(name, text)
+  label.checkbox-styled
+    input.checkbox-styled__input(type="checkbox", name=name)
+    span.checkbox-styled__icon
+    span=text
+
+mixin radio(name, text)
+  label.radio-styled
+    input.radio-styled__input(type="radio", name=name)
+    span.radio-styled__icon
+    span=text
+
+mixin quantity
+  .input-group.input-group-sm.product-quantity.js-quantity
+    span.input-group-prepend.js-quantity-btn(data-plus="-1")
+      button.input-group-text
+        i.fa.fa-minus
+    input.form-control.js-quantity-value(type="text", value="1")
+    span.input-group-append.js-quantity-btn(data-plus="1")
+      button.input-group-text
+        i.fa.fa-plus
+
+mixin quantity-2
+  .input-group.input-group-sm.product-quantity.js-quantity
+    input.form-control.js-quantity-value(type="text", value="1")
+    span.input-group-append.js-quantity-btn(data-plus="-1")
+      button.input-group-text
+        i.fa.fa-minus
+    span.input-group-append.js-quantity-btn(data-plus="1")
+      button.input-group-text
+        i.fa.fa-plus

@@ -1,6 +1,6 @@
-- var lib = ['fontawesome', 'jquery']
+- var rest = ['fontawesome', 'jquery', 'popper', 'bootstrap']
 
-mixin head(data, ...rest)
+mixin head(data)
   head
     title Title
     meta(charset='utf-8')
@@ -15,7 +15,7 @@ mixin head(data, ...rest)
     // custom style
     link(rel="stylesheet", href="./css/style.css")
 
-mixin script(data, ...rest)
+mixin script(data)
   // vendor script
   each js in rest
     if (jsList = data[js].js)

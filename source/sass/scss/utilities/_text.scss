@@ -1,7 +1,7 @@
 // add more font weight
 $font-weight-list: 300 400 500 600 700 800 900;
 @each $item in $font-weight-list {
-  .font-#{$item} {
+  .text-#{$item} {
     font-weight: #{$item} !important;
   }
 }
@@ -9,8 +9,23 @@ $font-weight-list: 300 400 500 600 700 800 900;
 // add more font-size
 $font-size-list: 8 10 12 13 14 15 16 18 20 22 24 25 26 28 30;
 @each $item in $font-size-list {
-  .font-#{$item} {
+  .text-#{$item} {
     font-size: #{$item}px !important;
+  }
+}
+
+.text-default {
+  &,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.text-underline {
+  &,
+  &:hover {
+    text-decoration: underline;
   }
 }
 

@@ -7,22 +7,12 @@ img {
 button {
   cursor: pointer;
 }
-.over-hidden {
-  overflow: hidden;
-}
-.cursor-pointer {
-  cursor: pointer;
-}
-.link-unstyled {
-  &,
-  &:hover {
-    color: inherit;
-    text-decoration: none;
-  }
-}
-.color-inherit {
-  &,
-  &:hover {
-    color: inherit;
+a,
+button,
+input,
+textarea,
+select {
+  &:focus {
+    outline: 0;
   }
 }

@@ -1,0 +1,12 @@
+.over-hidden {
+  overflow: hidden;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.color-default {
+  &,
+  &:hover {
+    color: inherit;
+  }
+}
