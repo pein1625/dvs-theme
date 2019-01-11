@@ -20,12 +20,6 @@
     position: absolute;
     top: 1px;
     left: 0;
-  }
-  &:hover &__icon {
-    border-color: $primary;
-  }
-  &__input:checked + &__icon {
-    border-color: $primary;
     &::before {
       content: '\f00c';
       font-family: 'fontawesome';
@@ -38,6 +32,17 @@
       top: 0;
       left: 0;
       font-size: 13px;
+      transform: scale(0);
+    }
+  }
+  &:hover &__icon {
+    border-color: $primary;
+  }
+  &__input:checked + &__icon {
+    border-color: $primary;
+    &::before {
+      transform: scale(1);
+      transition: transform .2s cubic-bezier(0.68, -0.75, 0.265, 1.75);
     }
   }
 }
@@ -64,12 +69,6 @@
     position: absolute;
     top: 1px;
     left: 0;
-  }
-  &:hover &__icon {
-    border-color: $primary;
-  }
-  &__input:checked + &__icon {
-    border-color: $primary;
     &::before {
       content: '';
       display: inline-block;
@@ -79,9 +78,19 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: scale(0)  translate(-50%, -50%);
       background-color: $primary;
       border-radius: 50%;
+    }
+  }
+  &:hover &__icon {
+    border-color: $primary;
+  }
+  &__input:checked + &__icon {
+    border-color: $primary;
+    &::before {
+      transform: scale(1) translate(-50%, -50%);
+      transition: transform .2s cubic-bezier(0.68, -0.75, 0.265, 1.75);
     }
   }
 }
