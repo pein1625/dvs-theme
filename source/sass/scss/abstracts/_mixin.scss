@@ -1,0 +1,40 @@
+@mixin img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+@mixin img-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 50% 50%;
+}
+@mixin iwrap($percent) {
+  display: block;
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: $percent;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+@mixin hover-room {
+  overflow: hidden;
+  img {
+    transition: .3s;
+  }
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
