@@ -38,3 +38,15 @@
     transform: scale(1.05);
   }
 }
+
+// add limit line for text
+@mixin max-line ($line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: $line-height-base;
+  @each $val in $line {
+    -webkit-line-clamp: #{$val};
+    max-height: #{$val * 1.5}em;
+  }
+}
