@@ -13,18 +13,16 @@
 @import 'scss/abstracts/common';
 
 @import 'scss/utilities/border';
-@import 'scss/utilities/iwrap';
 @import 'scss/utilities/shadow';
 @import 'scss/utilities/spacing';
 @import 'scss/utilities/text';
+@import 'scss/utilities/button';
+@import 'scss/utilities/dropdown';
+@import 'scss/utilities/form';
+@import 'scss/utilities/grid';
+@import 'scss/utilities/navbar';
+@import 'scss/utilities/pagination';
+@import 'scss/utilities/table';
 
-@import 'scss/components/button';
-@import 'scss/components/dropdown';
-@import 'scss/components/form';
-@import 'scss/components/grid';
-@import 'scss/components/navbar';
-@import 'scss/components/pagination';
-@import 'scss/components/table';
-
-@import 'scss/layouts/header';
-@import 'scss/layouts/footer';
+@import 'scss/components/header';
+@import 'scss/components/footer';

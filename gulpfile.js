@@ -167,8 +167,8 @@ gulp.task('copyvendor', function(){
 // copy video folder
 gulp.task('copyvideo', function(){
   return gulp
-    .src(source + 'video/**/*.*')
-    .pipe(gulp.dest(dest + 'video/'));
+    .src(source + 'videos/**/*.*')
+    .pipe(gulp.dest(dest + 'videos/'));
 });
 
 // = Delete
