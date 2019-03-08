@@ -6,7 +6,7 @@
     width: 100vw;
     max-width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: #000;
     opacity: .0;
     position: fixed;
     z-index: 999;
@@ -32,7 +32,7 @@
   width: 300px;
   height: 100vh;
   overflow-y: auto;
-  background-color: $gray-800;
+  background-color: $gray-700;
   transition: .3s;
   align-items: flex-start;
   &.is-show {
@@ -42,6 +42,36 @@
     padding-left: 15px;
   }
 }
+
+.navbar-header {
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: $white;
+  background-color: $gray-800;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 10px rgba(#000, 0.1);
+  color: rgba(#fff, 0.8);
+  text-shadow: 0 1px 2px rgba(#000, 0.6);
+}
+
+.navbar-close {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background: 0;
+  color: rgba(#fff, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 @each $key, $val in $grid-breakpoints {
   @media (min-width: #{$val}) {
     .navbar-mobile.navbar-expand-#{$key} {
@@ -56,6 +86,9 @@
       transition: unset;
       .dropdown-menu {
         padding-left: 0;
+      }
+      .navbar-header {
+        display: none;
       }
     }
   }

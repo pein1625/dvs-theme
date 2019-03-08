@@ -1,3 +1,14 @@
 extends layout/page
+include modules/menu/menu
 
 block content
+  .container
+    button.navbar-mobile-btn.btn.btn-primary
+      i.fa.fa-bars
+    .navbar-backdrop
+    .navbar.navbar-mobile.navbar-expand-xl
+      .navbar-header
+        button.navbar-close(type="button")
+          i.fa.fa-long-arrow-left
+        .navbar-title Navigation
+      +menu
