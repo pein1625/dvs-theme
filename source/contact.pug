@@ -1,0 +1,56 @@
+extends layout/page
+include modules/cart/cart
+
+block content
+  .container.py-50
+    .row
+      .col-lg-6.pb-30
+        h2 Contact Us
+        div
+          p(style="font-size: 16px; font-weight: 700; margin-bottom: 8px;") HÃNG LUẬT QUỐC GIA VIỆT NAM
+          p(style="line-height: 24px;")
+            | Địa chỉ: Tầng 8, Pacific Palace, 83B Lý Thường Kiệt, Hoàn Kiếm, Hà Nội, Việt Nam.
+            br
+            | Điện thoại (hotline):
+            a(href="#!") 0916 158 666
+            |
+            | -
+            a(href="#!") 0948 689 869
+            br
+            | Email:
+            a(href="#!") duc.mh@qgvn.vn
+            |
+            | -
+            a(href="#!") luatsu@qgvn.vn
+            br
+            | Web:
+            a(href="#!") www.qgvn.vn
+        .embed-responsive(style="height: 304px;")
+          <iframe src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1521.2869548164276!2d105.7911825956902!3d21.02174590609183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1527752170985' width='800' height='600' frameborder='0' style='border:0' allowfullscreen></iframe>
+
+      .col-lg-6.pb-30
+        form(action="#!")
+          .form-group
+            label
+              span Họ và tên
+              span.text-danger *
+            input.form-control(type="text")
+          .form-group
+            label
+              span Số điện thoại
+              span.text-danger *
+            input.form-control(type="text")
+          .form-group
+            label
+              span Email
+            input.form-control(type="text")
+          .form-group
+            label
+              span Tiêu đề
+            input.form-control(type="text")
+          .form-group
+            label
+              span Nội dung
+              span.text-danger *
+            textarea.form-control(rows="4")
+          button.btn.btn-success.px-35(type="submit") GỬI
