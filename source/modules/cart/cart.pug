@@ -1,0 +1,132 @@
+include ../form/form
+
+mixin cart-page
+  h2.text-20.text-uppercase.mb-2 Giỏ hàng
+  .table-responsive.mb-30
+    table.cart-table.table.table-hover.border.rounded
+      thead.text-13.bg-light
+        tr
+          th Sản phẩm
+          th Màu sắc
+          th(style="width: 75px;") Size
+          th(style="width: 75px;") Số lượng
+          th.text-right Đơn giá
+          th.text-right Thành tiền
+      tbody
+        - for(let i = 0; i < 4; i++)
+          tr
+            td
+              .media
+                a.d-block.mr-3(href="#!", style="width: 70px;")
+                  img.d-block.w-100(src="http://placekitten.com/67/100", alt="")
+                .media-body
+                  div
+                    a.d-inline-block.text-default.text-uppercase(href="#!") ĐẦM LIỀN / VÁY LIỀN ĐẦM TRẮNG HỌA TIẾT
+                  div Mã: FXDS8101526TA
+                  .mt-2
+                    a.d-inline-block.text-default.text-13(href="#!")
+                      i.fa.fa-times-circle.mr-1
+                      span Bỏ sản phẩm
+
+            td
+              +color-picker
+            td
+              select.form-control.form-control-sm
+                option S
+                option M
+                option L
+                option XL
+            td
+              +quantity
+            td.text-right
+              div 1.438.400đ
+              div
+                del.text-muted 1.798.000đ
+            td.text-right
+              div 1.438.400 đ
+        tr
+          td.text-right(colspan="6")
+            span Thành tiền:
+            span.text-20.text-danger.text-700 2.156.800đ
+
+  h2.text-20.text-uppercase.mb-2 Thông tin mua hàng
+  .row
+    .col-lg-8.pb-30
+      .card
+        .card-header.text-uppercase.text-700.text-center.py-10 Thông tin mua hàng
+        .card-body.pb-1
+          .text-uppercase.text-700.mb-10 Thông tin người mua hàng
+          .row.gutter-20
+            .col-md-4
+              .form-group
+                input.form-control(type="text", placeholder="Họ và tên người mua hàng*")
+            .col-md-4
+              .form-group
+                input.form-control(type="text", placeholder="Số điện thoại liên lạc*")
+            .col-md-4
+              .form-group
+                input.form-control(type="email", placeholder="Email nhận hoá đơn")
+            .col-12
+              .form-group
+                input.form-control(type="text ", placeholder="Địa chỉ (Số nhà, tên đường...")
+            .col-md-6
+              .form-group
+                select.form-control
+                  option Chọn tỉnh / thành phố
+                  option
+            .col-md-6
+              .form-group
+                select.form-control
+                  option Chọn quận / huyện
+                  option
+          hr.mt-0
+          .form-group
+            label.checkbox-styled
+              input.checkbox-styled__input.js-receiver-info-checker(type="checkbox", name="", checked="checked")
+              span.checkbox-styled__icon
+              span Thông tin người nhận hàng giống thông tin người mua hàng
+          .js-receiver-info-form.collapse
+            .row.gutter-20
+              .col-md-4
+                .form-group
+                  input.form-control(type="text", placeholder="Họ và tên người nhận hàng*")
+              .col-md-4
+                .form-group
+                  input.form-control(type="text", placeholder="Số điện thoại liên lạc*")
+              .col-md-4
+                .form-group
+                  input.form-control(type="email", placeholder="Email nhận hoá đơn")
+              .col-12
+                .form-group
+                  input.form-control(type="text ", placeholder="Địa chỉ (Số nhà, tên đường...")
+              .col-md-6
+                .form-group
+                  select.form-control
+                    option Chọn tỉnh / thành phố
+                    option
+              .col-md-6
+                .form-group
+                  select.form-control
+                    option Chọn quận / huyện
+                    option
+          script
+            include cart.js
+    .col-lg-4.pb-30
+      .card.mb-20
+        .card-header.text-uppercase.text-700.text-center.py-10 Mã giảm giá
+        .card-body.pb-1
+          form
+            .form-text.text-muted.text-center.mb-2 Nơi quý khách nhập “Mã giảm giá” để hưởng những ưu đãi của chúng tôi
+            .form-group.input-group
+              input.form-control(type="text", placeholder="Nhập mã giảm giá")
+              span.input-group-append
+                button.input-group-text.bg-dark.text-white(type="submit") Sử dụng
+      hr.mt-0
+      .form-group
+        label.checkbox-styled
+          input.checkbox-styled__input(type="checkbox", name="")
+          span.checkbox-styled__icon
+          span Tôi đồng ý với
+          a.text-primary(href="#!") điều khoản và dịch vụ
+      .text-center
+        button.btn.btn-block.btn-danger(type="submit") Tiến hành thanh toán

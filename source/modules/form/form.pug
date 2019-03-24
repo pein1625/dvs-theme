@@ -29,3 +29,18 @@ mixin quantity-2
     span.input-group-append.js-quantity-btn(data-plus="1")
       button.input-group-text
         i.fa.fa-plus
+
+mixin color-picker(name="color-picker")
+  .color-picker
+    label.color-picker__item
+      input(type="radio", name=name)
+      span(style="color: #f00;")
+    label.color-picker__item
+      input(type="radio", name=name)
+      span(style="color: #0ff;")
+    label.color-picker__item
+      input(type="radio", name=name)
+      span(style="color: #0f0;")
+    label.color-picker__item
+      input(type="radio", name=name)
+      span(style="color: #00f;")
