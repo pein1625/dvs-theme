@@ -37,7 +37,7 @@
     "gulp-watch": "^4.3.9",
     "install": "^0.8.1",
     "npm": "^3.10.6",
-    "pug": "^2.0.0-beta6",
+    "pug": "^3.0.1",
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
